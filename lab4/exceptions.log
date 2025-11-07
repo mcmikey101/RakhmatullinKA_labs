@@ -1,0 +1,6 @@
+Исключение: CustomAgeException
+Сообщение: Недопустимый возраст: 1234
+Стек вызовов:
+CustomAgeException: Недопустимый возраст: 1234
+	at CustomException.main(CustomException.java:38)
+-----
