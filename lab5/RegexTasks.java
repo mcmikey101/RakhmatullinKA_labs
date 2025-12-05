@@ -1,11 +1,10 @@
 import java.util.regex.*;
-import java.util.*;
 
 public class RegexTasks {
 
     public static void findNumbers(String text) {
         try {
-            Pattern pattern = Pattern.compile("\\d+\\.?\\d+");
+            Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
             Matcher matcher = pattern.matcher(text);
             System.out.println("Найденные числа:");
             while (matcher.find()) {
@@ -64,7 +63,7 @@ public class RegexTasks {
     }
 
     public static void main(String[] args) {
-        String sampleText = "Текст с числами 123 и 0.008";
+        String sampleText = "Текст с числами -1, 5, 123 и 0.008";
         findNumbers(sampleText);
         checkPassword("Password1");
         markUpperAfterLower("пример abC текста с lowerUpper словами");
