@@ -36,10 +36,14 @@ public class TopWords {
             }
         });
 
+        Iterator<Map.Entry<String, Integer>> it = list.iterator();
+        int printed = 0;
         int limit = Math.min(10, list.size());
-        for (int i = 0; i < limit; i++) {
-            Map.Entry<String, Integer> e = list.get(i);
+
+        while (it.hasNext() && printed < limit) {
+            Map.Entry<String, Integer> e = it.next();
             System.out.println(e.getKey() + " = " + e.getValue());
+            printed++;
         }
     }
 }

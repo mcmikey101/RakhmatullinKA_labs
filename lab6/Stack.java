@@ -2,6 +2,7 @@ public class Stack<T> {
     private T[] data;
     private int size;
 
+    @SuppressWarnings("unchecked")
     public Stack(int capacity) {
         data = (T[]) new Object[capacity];
         size = 0;
